@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Contact — Zenvy Shoe Store</title>
+<style>
+  :root{
+    --bg:#f4f4f4;
+    --card:#ffffff;
+    --accent:#ffcc00;
+    --accent-dark:#e6b800;
+    --muted:#666;
+    --max-width:1100px;
+    --radius:12px;
+    --shadow:0 6px 30px rgba(0,0,0,0.08);
+    --gap:20px;
+    font-family: Arial, sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:#222;
+    line-height:1.45;
+  }
+  .wrap{
+    max-width:var(--max-width);
+    margin:36px auto;
+    padding:24px;
+  }
+  header.hero{
+    background:linear-gradient(90deg,#222 0%, #333 100%);
+    color:var(--accent);
+    border-radius:var(--radius);
+    padding:28px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    box-shadow:var(--shadow);
+  }
+  .hero-left{ max-width:60%; }
+  .hero h1{ margin:0 0 6px; font-size:28px;}
+  .hero p{ margin:0; color:#fff; opacity:0.95; font-weight:500}
+  .hero img.logo{height:56px; border-radius:8px; background:#fff;padding:4px}
+  main.grid{
+    margin-top:var(--gap);
+    display:grid;
+    grid-template-columns: 1fr 420px;
+    gap:var(--gap);
+  }
+  .card{
+    background:var(--card);
+    border-radius:var(--radius);
+    padding:22px;
+    box-shadow:var(--shadow);
+  }
+  form .row{ display:flex; gap:12px; flex-wrap:wrap; }
+  .field{ margin-bottom:14px; width:100%; }
+  label{ display:block; font-size:14px; margin-bottom:6px; color:var(--muted) }
+  input[type="text"], input[type="email"], input[type="tel"], textarea, select {
+    width:100%;
+    padding:12px 14px;
+    border-radius:8px;
+    border:1px solid #e4e4e6;
+    background:#fff;
+    font-size:15px;
+  }
+  textarea{ min-height:120px; resize:vertical; }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 16px;
+    border-radius:10px;
+    border:0;
+    background:var(--accent);
+    color:#111;
+    font-weight:700;
+    cursor:pointer;
+    text-decoration:none;
+  }
+  .btn:hover{ background:var(--accent-dark) }
+  .muted{ color:var(--muted); font-size:14px }
+  .aside .contact-item{ display:flex; gap:12px; align-items:flex-start; margin-bottom:14px; }
+  .icon{
+    width:44px;
+    height:44px;
+    background:#f9f9f9;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid #eee;
+    font-weight:700;
+    color:#444;
+  }
+  .contact-item h4{ margin:0 0 4px; font-size:15px }
+  .contact-item p{ margin:0; color:var(--muted); font-size:14px }
+  .footer{
+    margin-top:18px;
+    text-align:center;
+    color:var(--muted);
+    font-size:14px;
+  }
+  @media (max-width:880px){
+    .hero-left{ max-width:100% }
+    main.grid{ grid-template-columns:1fr; }
+  }
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    #navbar {
+      background-color: #222;
+      overflow: hidden;
+    }
+
+    #navbar a {
+      float: left;
+      display: block;
+      color: #f4f4f4;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #navbar a:hover {
+      background-color: #575757;
+      color: #ffcc00;
+    }
+</style>
+</head>
+<body>
+  <div id="navbar">
+    <a href="index.html">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="review.html">Reviews</a>
+  </div>
+<div class="wrap">
+  <header class="hero">
+    <div class="hero-left">
+      <h1>Contact Zenvy Shoe Store</h1>
+      <p>Questions, collaboration, wholesale or returns — we’re here to help. Pick a method below and we’ll get back within 24 hours.</p>
+	  <p><b>If you want to buy shoe kindly mail us directly.</b></p>
+    </div>
+	
+    <img src="Zenvy.png" alt="Zenvy logo" class="logo" />
+  </header>
+
+  <main class="grid">
+    <!-- Form column -->
+    <section class="card">
+      <h2>Send us a message</h2>
+      <form action="mailto:zenvymart@gmail.com" method="post" enctype="text/plain">
+        <div class="row">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" name="Name" type="text" required placeholder="Your full name" />
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="Phone" type="tel" placeholder="Optional — e.g. +1 555 123 4567" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">Email address</label>
+          <input id="email" name="Email" type="email" required placeholder="you@example.com" />
+        </div>
+
+        <div class="field">
+          <label for="reason">Reason</label>
+          <select id="reason" name="Reason" required>
+            <option value="">Select a topic</option>
+			<option>Ordering shoe</option>
+            <option>Order status</option>
+            <option>Returns & exchanges</option>
+            <option>Wholesale inquiries</option>
+            <option>Store feedback</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="Message" required placeholder="Tell us how we can help..."></textarea>
+        </div>
+
+        <div style="display:flex; gap:12px; align-items:center; margin-top:8px;">
+          <button class="btn" type="submit">Send message</button>
+          <button type="reset" class="btn" style="background:#fff; border:1px solid #ddd;">Clear</button>
+          <span class="muted" style="margin-left:auto; font-size:13px">We reply within 24 hours</span>
+        </div>
+      </form>
+    </section>
+
+    <!-- Contact details column -->
+    <aside class="card aside">
+      <h3>Contact details</h3>
+
+      <div class="contact-item">
+        <div class="icon">✉️</div>
+        <div>
+          <h4>Email</h4>
+          <p><a href="mailto:zenvymart@gmail.com" style="color:inherit; text-decoration:underline;">zenvymart@gmail.com</a></p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="icon">📞</div>
+        <div>
+          <h4>Call us</h4>
+          <p><a href="tel:+15579205428" style="color:inherit; text-decoration:underline;">+1 (587) 920-5428</a></p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="icon">⏰</div>
+        <div>
+          <h4>Opening hours</h4>
+          <p class="muted">Mon–Fri: 15:00 — 23:00<br>Sat: 10:00 — 18:00<br>Sun: 10:00 — 18:00</p>
+        </div>
+      </div>
+
+      <div class="footer">
+        &copy; <span id="year"></span> Zenvy Shoe Store • All rights reserved
+      </div>
+    </aside>
+  </main>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
